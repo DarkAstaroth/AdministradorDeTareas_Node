@@ -10,10 +10,9 @@ const main = async () => {
     const tareasBD = leerDB();
     
     if (tareasBD) {
-        // establecer las tareas
+        // cargar tareas
+        tareas.cargarTareasFromArray(tareasBD);
     }
-
-    await pausa();
 
     do {
 
