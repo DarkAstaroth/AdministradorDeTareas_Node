@@ -8,7 +8,7 @@ const main = async () => {
     let opt = '';
     const tareas = new Tareas();
     const tareasBD = leerDB();
-    
+
     if (tareasBD) {
         // cargar tareas
         tareas.cargarTareasFromArray(tareasBD);
@@ -26,6 +26,12 @@ const main = async () => {
 
             case '2':
                 tareas.listadoCompleto();
+                break;
+            case '3':
+                tareas.listarPendentesCompletadas();
+                break;
+            case '4':
+                tareas.listarPendentesCompletadas(false);
                 break;
         }
 

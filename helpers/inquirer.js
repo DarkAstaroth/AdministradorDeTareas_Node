@@ -10,15 +10,15 @@ const preguntas = [
         choices: [
             {
                 value: '1',
-                name: `${'1.'.green}  Crear tarea`
+                name: `${'1.'.green} Crear tarea`
             },
             {
                 value: '2',
-                name: `${'2.'.green}  Listar tareas`
+                name: `${'2.'.green} Listar tareas`
             },
             {
                 value: '3',
-                name: `${'3.'.green}  Listar tareas completadas`
+                name: `${'3.'.green} Listar tareas completadas`
             },
             {
                 value: '4',
