@@ -19,6 +19,12 @@ class Tareas {
         this._listado = {};
     }
 
+    borrarTarea(id = '') {
+        if (this._listado[id]) {
+            delete this._listado[id];
+        }
+    }
+
     cargarTareasFromArray(tareas = []) {
         tareas.forEach(tarea => {
             this._listado[tarea.id] = tarea;
@@ -51,7 +57,7 @@ class Tareas {
             const estado = (completadoEn)
                 ? 'Completada'.green
                 : 'Pendiente'.red;
-            
+
             if (completadas) {
                 if (completadoEn) {
                     contador += 1;
@@ -63,9 +69,11 @@ class Tareas {
                     console.log(`${contador.toString().green}. ${desc} :: ${estado}`);
                 }
             }
-            
+
         });
     }
+
+
 }
 
 module.exports = Tareas;
